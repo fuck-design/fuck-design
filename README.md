@@ -1,3 +1,11 @@
-# fuck-design
+<p align="center">
+  <a href="https://ant.design">
+    <img width="200" src="https://user-images.githubusercontent.com/26923747/139002386-d421f04c-d10e-42ab-b560-c4f7f3bc9b2d.png">
+  </a>
+</p>
 
-由于前端轮子库过多，决定使用 fuck-design 统一组件库体系，降低用户选择成本。
+
+<h1 align="center">Fuck Design</h1>
+
+Because there are too many front-end  UI wheel libraries, We decided to use the Fuck Design unified component library system to reduce user selection costs.
+

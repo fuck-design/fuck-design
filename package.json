@@ -1,0 +1,71 @@
+{
+  "name": "fuck-design",
+  "version": "0.1.0",
+  "description": "回归本质，返璞归真！",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf lib esm",
+    "test": "jest",
+    "lib": "run-p lib:*",
+    "lib:cjs": "tsc -p tsconfig.json --target ES5 --module commonjs --outDir lib",
+    "lib:esm": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir esm",
+    "build": "npm run clean && npm run test && npm run lib"
+  },
+  "keywords": [
+    "ui",
+    "design",
+    "design-system",
+    "react-component"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "jest": "^27.3.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuck-design/fuck-design.git"
+  },
+  "author": "fuck-design",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuck-design/fuck-design/issues"
+  },
+  "homepage": "https://github.com/fuck-design/fuck-design#readme"
+}

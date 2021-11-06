@@ -4,4 +4,3 @@
  export type IProps = {
     text: string;
   };
-  

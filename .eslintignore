@@ -1,0 +1,9 @@
+/scripts
+/config
+.history
+.github
+.husky
+__tests__
+.stylelintrc
+.eslintrc
+.prettierrc

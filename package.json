@@ -16,7 +16,23 @@
     "lib": "run-p lib:*",
     "lib:cjs": "tsc -p tsconfig.json --target ES5 --module commonjs --outDir lib",
     "lib:esm": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir esm",
-    "build": "npm run clean && npm run test && npm run lib"
+    "build": "npm run clean && npm run test && npm run lib",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "cross-env TIMING=1 eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "prettier": "prettier -c --write \"**/*\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
+    ]
   },
   "keywords": [
     "ui",
@@ -31,7 +47,17 @@
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@umijs/fabric": "^2.8.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^38.0.1",
+    "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "rimraf": "^3.0.2",

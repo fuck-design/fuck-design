@@ -13,17 +13,17 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "jest",
-      "react",
-      "node"
-    ]
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "react", "node"]
   },
   "include": [
-    "src"
-  ]
+    "src/**/*",
+    "tests/**/*",
+    "test/**/*",
+    "__test__/**/*",
+    ".eslintrc.js",
+    ".stylelintrc.js",
+    ".prettierrc.js"
+  ],
+  "exclude": ["node_modules", "build", "jest"]
 }

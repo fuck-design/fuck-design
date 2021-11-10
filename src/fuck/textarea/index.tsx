@@ -8,7 +8,7 @@ export { TextareaProps };
  * @param props
  * @returns
  */
-export const Textarea: React.FC<TextareaProps> = props => {
+export const Textarea: React.FC<TextareaProps> = (props) => {
   const { text } = props;
   return <textarea>{text}</textarea>;
 };

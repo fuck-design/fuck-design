@@ -17,6 +17,7 @@ doc.zip
 yarn.lock
 /pnpm-lock.yaml
 package-lock.json
+.eslintcache
 
 # library assets
 dist

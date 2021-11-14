@@ -6,3 +6,4 @@ export { Strong, StrongProps } from "./fuck/strong";
 export { Textarea, TextareaProps } from "./fuck/textarea";
 export { I, IProps } from "./fuck/i";
 export { A, AProps } from "./fuck/a";
+export { Label, LabelProps } from "./fuck/label";

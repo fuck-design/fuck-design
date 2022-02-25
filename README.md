@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://ant.design">
+  <a href="https://arco.design">
     <img width="200" src="https://user-images.githubusercontent.com/26923747/139002386-d421f04c-d10e-42ab-b560-c4f7f3bc9b2d.png">
   </a>
 </p>
